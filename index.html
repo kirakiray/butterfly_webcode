@@ -1,27 +1,48 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Butterfly webcode by kirakiray</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <title>图片播放器优化版</title>
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/sr.min.js"></script>
+    <style>
+    body {
+        font-weight: bold;
+        position: relative;
+    }
+    
+    .vcode_container {
+        position: absolute;
+        /* top: -370px;
+        left: -100px; */
+        background-color: #fefefe;
+    }
+    
+    .tools {
+        z-index: 100;
+        position: fixed;
+        /* left: 0; */
+        /* top: 770px; */
+        text-align: center;
+    }
+    
+    .tools button {
+        font-size: 20px;
+    }
+    </style>
 </head>
 
 <body>
-    <section class="page-header">
-        <h1 class="project-name">Butterfly webcode</h1>
-        <h2 class="project-tagline"></h2>
-        <a href="https://github.com/kirakiray/butterfly_webcode" class="btn">View on GitHub</a>
-        <a href="https://github.com/kirakiray/butterfly_webcode/zipball/master" class="btn">Download .zip</a>
-        <a href="https://github.com/kirakiray/butterfly_webcode/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
-    <section class="main-content">
-    test haha
-    </section>
+    <div class="tools">
+        <div>
+            <input id="tar_rang" type="range" min="0" max="2135" value="0" style="width:1280px;">
+        </div>
+        <button id="pause" disabled>暂停</button>
+        <button id="play" disabled>播放</button>
+        <div id="show_num"></div>
+    </div>
 </body>
+<script src="js/main.js"></script>
 
 </html>
